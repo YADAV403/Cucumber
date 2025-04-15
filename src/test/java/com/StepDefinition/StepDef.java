@@ -91,7 +91,7 @@ public class StepDef extends Base {
 	@When("Click logout button")
 	public void click_logout_button() throws InterruptedException {
 		log.info("Clicked logout button");
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 	    lp.clickOnLogOutButton();
 	}
 
