@@ -12,7 +12,7 @@
 		</Appender>
 	</Appenders>
 	<Loggers>
-		<Root level="OFF">
+		<Root level="INFO">
 			<AppenderRef ref="file"/>
 			<Appender-ref ref="STDOUT"/>
 		</Root>
