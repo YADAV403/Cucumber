@@ -12,8 +12,8 @@ import io.cucumber.testng.CucumberOptions;
 		glue = "com.StepDefinition",
 		dryRun = false,
 		monochrome = true,
-		plugin = {"pretty", "html:target/report.html"},
-		tags = "@Sanity"
+		plugin = {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
+//		tags = "@Sanity"
 		)
 public class Runner extends AbstractTestNGCucumberTests {
 

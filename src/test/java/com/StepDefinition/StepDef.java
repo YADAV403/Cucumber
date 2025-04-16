@@ -12,9 +12,10 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
 import com.PageObjects.LoginPage;
 
-import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
@@ -59,7 +60,7 @@ public class StepDef extends Base {
 	public void open_url_as(String url) throws InterruptedException {
 		log.info("Opening URL");
 	    wd.get(url);
-	    Thread.sleep(5000);
+	    Thread.sleep(10000);
 	}
 
 	@When("Enter username as {string} and password as {string}")
@@ -101,7 +102,7 @@ public class StepDef extends Base {
 		wd.close(); 
 	}
 	
-	@After
+//	@After
 	public void teardown(Scenario s) {
 		if(s.isFailed()==true) {
 			log.info("Failed Screenshots");
@@ -112,6 +113,15 @@ public class StepDef extends Base {
 		}
 		wd.quit();
 	}
+	
+	@AfterStep
+	public void addScreenshot(Scenario scenario){
 
-
+		if(scenario.isFailed())
+		{
+		final byte[] screenshot = ((TakesScreenshot) wd).getScreenshotAs(OutputType.BYTES);
+		//attach image file report(data, media type, name of the attachment)
+		scenario.attach(screenshot, "image/png", scenario.getName());
+		}
+	}
 }
