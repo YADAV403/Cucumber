@@ -3,6 +3,7 @@ Feature: Login
 	Background: Common steps
 	Given Launch the browser
 	When Open URL as "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+	
 	@Sanity
 	Scenario: Login with valid credentials
 	And Enter username as "Admin" and password as "admin123"

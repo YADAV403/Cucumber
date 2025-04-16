@@ -1,0 +1,8 @@
+14:04:00:861 [main]INFO  com.StepDefinition.StepDef -Launching Browser
+14:04:05:539 [main]INFO  com.StepDefinition.StepDef -Opening URL
+14:04:17:161 [main]INFO  com.StepDefinition.StepDef -Entering the credentials
+14:04:17:491 [main]INFO  com.StepDefinition.StepDef -Clicked login button
+14:04:17:656 [main]INFO  com.StepDefinition.StepDef -Validation
+14:04:18:912 [main]INFO  com.StepDefinition.StepDef -Clicked logout button
+14:04:23:293 [main]INFO  com.StepDefinition.StepDef -Validation
+14:04:23:327 [main]INFO  com.StepDefinition.StepDef -Closing the browser

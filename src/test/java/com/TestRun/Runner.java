@@ -1,11 +1,12 @@
 package com.TestRun;
 
-import org.junit.runner.RunWith;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
+import io.cucumber.testng.CucumberOptions;
 
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
+//import io.cucumber.junit.Cucumber;
+//import io.cucumber.junit.CucumberOptions;
 
-@RunWith(Cucumber.class)
+//@RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "./Features/",
 		glue = "com.StepDefinition",
@@ -14,6 +15,6 @@ import io.cucumber.junit.CucumberOptions;
 		plugin = {"pretty", "html:target/report.html"},
 		tags = "@Sanity"
 		)
-public class Runner {
+public class Runner extends AbstractTestNGCucumberTests {
 
 }
